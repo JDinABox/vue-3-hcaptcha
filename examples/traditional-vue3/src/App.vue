@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 // import VueHcaptcha from '@hcaptcha/vue3'; // for production
-import VueHcaptcha from '../../../packages/vue2/src/hcaptcha.vue';
+import VueHcaptcha from '../../../packages/vue3/src/hcaptcha.vue';
 
 const verified = ref(false);
 const expired = ref(false);

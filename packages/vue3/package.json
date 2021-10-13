@@ -5,6 +5,16 @@
   "homepage": "https://github.com/hCaptcha/vue-hcaptcha",
   "organization": "hCaptcha",
   "license": "MIT",
+  "keywords": [
+    "hcaptcha",
+    "captcha",
+    "component",
+    "vue",
+    "vue-component",
+    "vue3",
+    "vue3-component",
+    "earn"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/hCaptcha/vue-hcaptcha.git",
@@ -13,12 +23,16 @@
   "bugs": {
     "url": "https://github.com/hCaptcha/vue-hcaptcha/issues"
   },
-  "main": "./dist/hcaptcha-vue3.umd.js",
-  "module": "./dist/hcaptcha-vue3.es.js",
+  "main": "./dist/@hcaptcha/vue3.umd.js",
+  "module": "./dist/@hcaptcha/vue3.es.js",
+  "types": "../../types/index.d.ts",
   "files": [
-    "dist"
+    "dist/@hcaptcha",
+    "../../types/index.d.ts"
   ],
   "scripts": {
+    "test": "jest",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
@@ -30,7 +44,48 @@
     "vue": "^3.2.19"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
-    "vite": "^2.6.4"
-  }
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "@types/jest": "^27.0.2",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/test-utils": "^2.0.0-rc.16",
+    "@vue/vue3-jest": "^27.0.0-alpha.1",
+    "babel-jest": "^27.2.5",
+    "eslint": "^7.32.0",
+    "eslint-plugin-flowtype": "^6.1.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-vue": "^7.18.0",
+    "jest": "^27.2.5",
+    "mitt": "^3.0.0",
+    "regenerator-runtime": "^0.13.9",
+    "ts-jest": "^27.0.5",
+    "vite": "^2.5.10",
+    "vue-jest": "^5.0.0-alpha.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
